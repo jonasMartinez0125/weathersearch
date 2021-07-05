@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="build/img/weathersearch-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="build/css/bootstrap.min.css">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <title>Weather</title>
+</head>
+<body class="bg-dark min-vh-100 d-flex flex-column justify-content-between">
+    <div class="container py-3">
+        <h1 class="text-white text-center fs-1 fw-bold text-uppercase">
+            Search the Weather
+        </h1>
+        <div class="row row-cols-2 g-2">
+            <div class="col">
+                <div class="h-100 card">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center" id="result-container">
+                        <p class="card-text fs-5 text-center text-uppercase text-muted m-0" id="info-text">Add the city and country, the weather will be shown here</p>           
+                     </div>
+                </div>
+            </div>
+     
+            <div class="col">
+                <div class="h-100 card">
+                    <div class="card-body">
+                        <form id="form" class="d-flex flex-column" action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="city" class="form-label">City:</label>
+                                <input type="text" name="city" id="city" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="country" class="form-label">Country:</label>
+                                <select name="country" id="country" class="form-select">
+                                    <option selected disabled value="">--Select--</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="Get Weather" class="align-self-end btn btn-warning text-uppercase text-muted">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-secondary">
+        <p class="container fs-4 text-center text-white mb-0 py-3"><span id="year" class="me-1"></span>&copy; All rights reserved. Developed by Jonas Martinez</p>
+    </footer>
+
+    <script src="build/js/bundle.min.js"></script>
+</body>
+</html>
