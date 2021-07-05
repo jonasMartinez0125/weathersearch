@@ -146,6 +146,12 @@ async function showWeather(e) {
     const city = document.querySelector('#city').value;
     const country = document.querySelector('#country').value;
 
+    if(city === '' || country === '') {
+        ui.cleanHTML();
+        ui.printAlert('All fields are required', 'error');
+        return;
+    }
+
     await api.consultWeatherAPI(city, country);
 }
 
